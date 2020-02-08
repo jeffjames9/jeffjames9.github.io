@@ -24,8 +24,21 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
+    // use the function to collect integers into an array
+    // should include all integers from start number to end number
+    // return the array
+    // put the for loops in if statements.  if start is bigger than end,
+    // return a backwards array from start to end integers
     
-    
+    var myArray = [];
+    if (start <= end) {
+    for (var i = start; i <= end; i++) {
+      myArray.push(i);
+    }} else {
+      for (var i = start; i >= end; i--) {
+      myArray.push(i)
+    }}
+ return myArray;
     
     // YOUR CODE GOES ABOVE HERE //
 }

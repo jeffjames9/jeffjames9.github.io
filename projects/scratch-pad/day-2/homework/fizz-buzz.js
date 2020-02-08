@@ -13,10 +13,26 @@
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
 
+// function should console.log all numbers but replace certain ones with words
 
+for (var i = 1; i <= 100; i++) {
 
-    // YOUR CODE GOES ABOVE HERE //
+// if the number is a multiple of 5 and 3, print "FizzBuzz" to console
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz");
+// if it's a multiple of 3, print "Fizz" to console
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+// if it's a multiple of 5, print "Buzz"
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+// if it's a multiple of neither, print the #
+    } else {console.log(i);}
+    }
+
 }
+    // YOUR CODE GOES ABOVE HERE //
+
 
 
 

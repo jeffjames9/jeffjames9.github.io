@@ -38,6 +38,16 @@
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
 
+// create a function "makeContact(id, nameFirst, nameLast)" that will 
+// return the information as an object:
+// => {id: 1, nameFirst: 'Max', nameLast: 'Gaudin'}
+  
+  var contact = {
+    "id": id,
+    "nameFirst": nameFirst,
+    "nameLast": nameLast
+  }; 
+  return contact;
 } 
 
 
@@ -45,16 +55,61 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
+    
+     // create a makeContactList factory function
+     // return an object that manages contacts variable 
+     // length() should return the number of contacts
+     // addContact(contact) should take a contact object and add it to contact-list
+     // findContact(fullname) should take fullname and return contact object
+     // if found or undefined if not
+     // removeContact(contact) removes contact from contact list
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact) {
+            return contacts.push(contact);
+        },
+        // iterate through the contacts array and see if any objects match
+        // return object or undefined
+        findContact: function(fullName) {
+            for (var i = 0; i <= contacts.length - 1; i++) {
+                if (contacts[i].nameFirst + " " + contacts[i].nameLast == fullName) {
+                    return contacts[i];
+                } else {return undefined;}
+            }
+            
+        },
+        removeContact: function(contact) {
+            for (var i = 0; i <= contacts.length - 1; i++) {
+                if (contact === contacts[i]) {
+                    contacts.splice(i,1);
+            }
         }
-    }
-}
-
+        },
+        
+        // create a printAllContactNames function which returns a string
+        // which has each person's first and last name on one line
+        // remember newline breaks.  no newline break after the last name.
+        
+        printAllContactNames: function() {
+            var fullname1;
+            var newString = "";
+            for (let i = 0; i <= contacts.length - 1; i++) {
+                fullname1 = contacts[i].nameFirst + " " + contacts[i].nameLast
+                newString += fullname1;
+                if (i != contacts.length - 1) {
+                    newString += "\n";
+                }
+            };
+            return newString;  
+        }
+            
+        }
+};
 
 
 

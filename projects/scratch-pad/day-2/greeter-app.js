@@ -36,7 +36,18 @@
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
     
+    // take an input, hour, an return the proper greeting
+    // from the list of greetings above
     
+    if (hour > 24 || hour < 0) {
+        console.log("That's not a recognized time!");
+    } else if (hour < 12) {
+        console.log("Good Morning!");
+    } else if (hour < 17) {
+        console.log("Good Afternoon!");
+    } else if (hour < 22) {
+        console.log("Good Evening!");
+    } else {console.log("Good Night!");}
     
     
     // YOUR CODE ABOVE HERE //

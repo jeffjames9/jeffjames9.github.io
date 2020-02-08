@@ -15,7 +15,8 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    // return true if the value is an array, otherwise false   
+    return Array.isArray(value);
     
     
     // YOUR CODE ABOVE HERE //
@@ -32,8 +33,13 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
+    // check to make sure the object is not an array, not a date, and not null
+    // return true if it's only an object
     
-    
+    if (typeof value === "object" && Array.isArray(value) != true && value != null && Date() != value) {
+        return true;
+    }
+      else {return false}
     
     // YOUR CODE ABOVE HERE //
 }
@@ -47,7 +53,13 @@ function isObject(value) {
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
+    // check to make sure the object is not a date and not null
+    // return true if it's only an object (or an array)
     
+    if (typeof value === "object" && value != null && Date() != value) {
+        return true;
+    }
+      else {return false}   
     
     
     // YOUR CODE ABOVE HERE //
@@ -75,7 +87,19 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
+    // given an input value, return the type as a string
+    // Will have to make exceptions for different objects
+    // then the other types will just have to use typeof and be made to strings
     
+    if (typeof value === "object" && Array.isArray(value) != true && value != null && Date() != value) {
+        return "object";
+    } else if (Array.isArray(value) == true) {
+        return "array";
+    } else if (value === null) {
+        return "null";
+    } else if (Date() == value) {
+        return "date";
+    } else {return (typeof value).toString()}
     
     
     // YOUR CODE ABOVE HERE //
