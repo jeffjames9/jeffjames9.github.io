@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////////////////////////////
+// min /////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+function min(param1, param2) {
+ if (param1 < param2) {
+   return param1;
+ } else if (param2 <= param1) {
+   return param2;
+ }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// isEven //////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// i: function isEven with one param
+// o: use recursion for "true" is the value is even, false if its not or negative
+
+// if the parameter can have two subtracted from it until it is zero, return true
+ // set up recursion to reuse the function with param-2
+ // if the param gets lower than zero, return false
+
+function isEven(param) {
+  if (param == 0) {
+      return true;
+  } else if (param >= 2) {
+  return isEven(param - 2);
+} else return false;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// countChars //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// i: function countChars with params string and letter to look for
+// o: return the number of times that letter appears
+
+// start a counter at 0
+  // use a for loop to iterate through the array
+    // if the letter accessed at each location in the string = letter, add to count
+// return count  
+
+function countChars(string, letter) {
+ let count = 0;
+ for (var i = 0; i < string.length; i++) {
+     if (string[i] === letter) {
+         count++
+     }
+ }
+ return count;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// countBs /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// i: function countBs that takes an input string as a param
+// o: returns the number of uppercase Bs
+
+// start a counter at 0
+  // use a for loop to iterate through the array
+    // if the letter accessed at each location in the string = B, add to count
+// return count    
+
+function countBs(string) {
+ let count = 0;
+ for (var i = 0; i < string.length; i++) {
+     if (string[i] === 'B') {
+         count++
+     }
+ }
+ return count;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  module.exports = {
+    min,
+    isEven,
+    countBs,
+    countChars,
+  };
+};
