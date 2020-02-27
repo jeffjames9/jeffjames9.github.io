@@ -12,10 +12,13 @@
 console.log("abc" < "bce"); // => true
 console.log("abc" > "bce"); // => false
 // + is used to concatenate strings
-var firstName = 'Jeff';
+var name = 'Jeff';
 var lastName = 'James';
-console.log(firstName + ' ' + lastName); // => Jeff James
+console.log(name + ' ' + lastName); // => Jeff James
 
+// we can also use += to manipulate a string
+name += " " + lastName;
+console.log(name); // => Jeff James
 
 // 2. with string methods
 // Javascript treats strings like objects when executing methods
@@ -23,9 +26,6 @@ console.log(firstName + ' ' + lastName); // => Jeff James
 
 var strOne = "I have plans"
 var strTwo = "to go swimming tomorrow."
-
-// .length
-console.log(strOne.length); // => 12, the # of characters in strOne
 
 // search()
 console.log(strOne.search("have")); // => 2

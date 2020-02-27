@@ -3,7 +3,22 @@
  * 
  * 0. Sometimes we want a programs to act differently depending on 
  * the information it is given. There are a number of statements that Javascript 
- * supports to make the program interactive.
+ * supports to make the program interactive.  
+ * 
+ * An if statement must come first in the order of control flow.  The else if 
+ * and else statements are optional.  We write the first if statement:
+ * 
+ * if (condition goes here) {
+     if the condition resolves to true, code will run here;
+ } else if (if the first condition does not resolve to true, does this one?) {
+     if the second condition is true, run this code;
+ } else if (can have as many conditionals as youd like) {
+     if any resolve to true, this code will be run and the if statement will end
+ } else {
+     else is an optional default;
+     this code will only run if all other ifs resolve to false;
+ }
+ 
  * 
 */
 // 1. if
@@ -47,11 +62,19 @@ if (1 > 2) {                            // false
 var switchVar = "arrows";
 
 switch(switchVar) {
+  // the value of the expression is compared to the value of each case
   case "rocks":
+  // in this case they are not the same  
     console.log("Not this one");
     break;
+  // here is a match, so all code is executed until the next break.
   case "arrows":          // condition met.  execute code til break.
   case "hammers":
     console.log("This will execute for arrows or hammers");
+    // this break will indicate that we should stop executing inside the switch
     break;      //  => This will execute for arrows or hammers
+  // we can set a default in the case that no other switch is triggered
+  default: 
+     console.log("We did not get here");
+    
 }

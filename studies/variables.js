@@ -41,7 +41,8 @@ var keywords declares a variable
 
 */
 
-var myVar;  // Initialization.  Declares variable, but does not assign it
+var myVar;  // Declares variable, but does not assign it
+var myNewVar = 0; // Initialization.  Have declared and assigned in one step.
 let myLet;
 const myConst = [];
 console.log(myVar); // => undefined

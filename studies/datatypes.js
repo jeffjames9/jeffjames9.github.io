@@ -8,12 +8,16 @@
  * 
 */
 // 1. number
-// a number is a numerical value.
+// a number is a numerical value.  In javascript, numbers can be negative
+// and they can have decimal values
 var myNum = 2; // assigns a numerical value
+console.log(myNum += -2.5); // => -0.5
 
 // 2. string
 // a string is a series of characters
 var myString = "word"; // assigns a series characters
+console.log(myString[2]); // => r
+// letters are stored in an ordered list that we can access with bracket notation
 // can use single or double quotes
 
 // 3. boolean
@@ -35,6 +39,10 @@ var myObj = {
     lastName: "James"
 };
 console.log(myObj); // => { firstName: 'Jeff', lastName: 'James' }
+// we can use bracket or dot notation to access values in an object
+console.log(myObj.firstName);   // => Jeff
+console.log(myObj["lastName"]);  // => James
+
 
 // 6. function
 // a callable object which executes a codeblock

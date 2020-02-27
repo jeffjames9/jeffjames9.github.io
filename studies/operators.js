@@ -34,19 +34,27 @@ if (a < b) {
 var varOne = "2";
 var varTwo = 2;
 console.log(varOne == varTwo) ; // => true - the string and num are loosely equal
+// loose comparison allows values to be converted into a common type
+// before the comparison is made
 console.log(varOne === varTwo); // => false - but not strictly
+// strictly equal does not allow values to be converted to a common type
+// before comparison
 console.log(5 != 5); // => false - because 5 IS equal to five
 
 // 4. logical operators
 // Logical Operators are typically used to compare Boolean values and 
 // return a Boolean value
 // &&, ||, !
+
+// && means that both operands must evaluate to true in order to run the code
 if (a == b && 5 > 4) { //evaluates to false, as one is false
     console.log("Hello"); // no output
 }
+// the bang operator is akin to saying "not";  the opposite must be true
 if (a != b && 5 > 4) { //evaluates to true, as both are true
     console.log("message 2"); // => message 2
 }
+// the double bars (||) mean that one of the statements must evaluate to true
 if (a == b || 5 > 4) { //evaluates to true, because one is true
     console.log("message 3"); // => message 3
 }
@@ -78,6 +86,9 @@ console.log(myNewVar);
 // this could be rewritten:
 (a != b) ? myNewVar = 1 : myNewVar = 2;
 console.log(myNewVar); // => 1
+
+// the syntax: 
+// (Conditional here) ? this is what happens if it's true : this is false;
 
 
 

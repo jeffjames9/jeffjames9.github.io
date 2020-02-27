@@ -9,11 +9,20 @@
 
 var j = 0;
 
-// 1. first we must invoke a function.  then we can call it.
-var myFunc = function() {            // invocation
+// 1. first we must declare a function.  then we can invoke/call it.
+var myFunc = function() {            // declaration
     console.log("Text Here");
 }
-myFunc();                            // => Text Here (this is the call)
+myFunc();                            // => Text Here (invocation/call)
+
+// We can also create a function expression by assigning a function
+// to a variable.
+
+var alphaOmega = function() {
+    console.log("Hello");
+}
+
+alphaOmega();  // => Hello   This is a call to a function expression.
 
 // 2. Parameters versus Arguments
 // Parameters are listed in the function definition
@@ -32,13 +41,13 @@ function addNums(par1, par2) {
 }
 console.log(addNums(6,7));   // => 13
 
-// 4. Assigning functions to variables
+// 4. Assigning functions to variables (Function expression)
 var myFuncAgain = function() {
     j++;
 }
 console.log(myFuncAgain); // returns [Function: myFunc]
 console.log(j); // => 0
-myFuncAgain();  // => actually iterates the global variable j
+myFuncAgain();  // => actually increments the global variable j
 console.log(j); // => 1
 
 // 5. Function inputs and outputs
@@ -49,6 +58,17 @@ function func10(parameter1, parameter2) {  // params could be named anything
     return parameter1 + parameter2;        // return sets up the output
 }
 console.log(func10(4,5)); // => 9
+
+// Inputs and Outputs are not required in a function, although a function's
+// value will be undefined unless it has a return statement
+
+function myNewFunk() {
+    
+}
+
+console.log(myNewFunk()); // => undefined
+// a return statement is needed to give value to a function
+// this function accept no inputs and provides no action
 
 // 6a. Functions can see and modify variables in the global scope
 var alpha = 15;             // global variable declared
