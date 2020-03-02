@@ -27,7 +27,7 @@ const _ = require('lodown-oliviasaborush');
  - Data is available to you in an Array stored in the variable `customers`
  - To test your solutions run `npm start --prefix ./<YOUR_GITHUB_FOLDER/projects/let-s-get-functional` in your terminal  
  
- _IMPORTANT_: Make sure you replace `<YOUR_GITHUB_FOLDER` with your actual github folder in your workspace.
+ _IMPORTA   NT_: Make sure you replace `<YOUR_GITHUB_FOLDER` with your actual github folder in your workspace.
 
 ### 1: `maleCount`
  - **Objective**: Find the number of male customers

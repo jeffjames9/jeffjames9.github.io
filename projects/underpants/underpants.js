@@ -69,7 +69,7 @@ _.typeOf = function(value) {
 } else {
     return "object";
 }
-}
+};
 
 /** _.first
 * Arguments:
@@ -116,7 +116,7 @@ _.first = function(array, num) {
       }
 }
     return newArray;
-}
+};
 
 
 /** _.last
@@ -151,7 +151,7 @@ _.first = function(array, num) {
 // return newArray if function made it this far
 
 _.last = function(array, num){
-    var newArray = []
+    var newArray = [];
     if (!Array.isArray(array)){
         return [];
     } 
@@ -165,7 +165,7 @@ _.last = function(array, num){
     }
     }
     return newArray;
-}
+};
 
 
 /** _.indexOf
@@ -202,7 +202,7 @@ for (var i = 0; i < array.length; i++ ){
     }
  }
  return -1;
-}
+};
 
 
 
@@ -240,7 +240,7 @@ _.contains = function(array, value){
     }
     
     return result;
-}
+};
 
 
 
@@ -285,7 +285,7 @@ _.each = function(collection, func) {
              func(collection[key], key, collection);
             }
     } 
-}
+};
 
 /** _.unique
 * Arguments:
@@ -316,7 +316,7 @@ _.unique = function(array) {
         }
     }    
     return newArray;
-}           
+};
     
 /** _.filter
 * Arguments:
@@ -351,7 +351,7 @@ _.filter = function(array, func) {
         }
     }
     return newArray;
-}
+};
 
 /** _.reject
 * Arguments:
@@ -379,13 +379,13 @@ _.filter = function(array, func) {
 
 _.reject = function(array, func){
     let newArr = [];
-    let silly = _.filter(array, func)
+    let silly = _.filter(array, func);
     for (var i = 0; i <array.length; i++){
          if (!silly.includes(array[i]))
         newArr.push(array[i]);
        }
     return newArr;
-}
+};
 
 /** _.partition
 * Arguments:
@@ -419,18 +419,17 @@ _.reject = function(array, func){
 // set placeholder array equal to an array of the two subarrays and return it
 
 _.partition = function(array, func){
-    let newArray = [];
     let arrTruthy = [];
     let arrFalsy = [];
     for (var i = 0; i < array.length; i++){
         if (func(array[i], i, array) == true) {
             arrTruthy.push(array[i]);
         }else{
-            arrFalsy.push(array[i])
+            arrFalsy.push(array[i]);
            }
-    }      
- return newArray = [arrTruthy, arrFalsy];
-}
+    } 
+ return [arrTruthy, arrFalsy];
+};
 
 /** _.map
 * Arguments:
@@ -474,7 +473,7 @@ _.map = function(collection, func) {
         }
     }
  return newArr;
-}
+};
 
 /** _.pluck
 * Arguments:
@@ -497,7 +496,7 @@ _.map = function(collection, func) {
 
 _.pluck = function(arrOfObj, prop) {
      return _.map(arrOfObj, function(e){return e[prop]});
-    }
+    };
 
 /** _.every
 * Arguments:
@@ -561,7 +560,7 @@ _.every = function(collection, func) {
         }
     }
 return true;
-    }
+    };
     
 /** _.some
 * Arguments:
@@ -623,7 +622,7 @@ _.some = function(collection, func) {
         }
     }
  return false;
-}
+};
 
 
 /** _.reduce
@@ -670,7 +669,7 @@ _.reduce = function(array, func, seed) {
        seed = func(seed, array[i], i);
     }
      return seed;
-}
+};
 
 /** _.extend
 * Arguments:
@@ -702,7 +701,7 @@ _.extend = function() {
         }
     }
     return arguments[0];
-}
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
